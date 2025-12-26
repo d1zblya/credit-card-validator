@@ -145,6 +145,9 @@ func main() {
 		} else if !validateInput(cardNumber) {
 			fmt.Println("Invalid input. Please enter a valid credit card number.")
 			continue
+		} else if !validateLuhn(cardNumber) {
+			fmt.Println("The card number does not pass the checksum check.")
+			continue
 		}
 		bin := extractBIN(cardNumber)
 		bank := identifyBank(bin, banks)
