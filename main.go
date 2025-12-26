@@ -33,9 +33,9 @@ func loadBankData(path string) ([]Bank, error) {
 		}
 
 		fields := strings.Split(line, ",")
-		lenght := len(fields)
-		if lenght != 3 {
-			return nil, fmt.Errorf("Row contains an incorrect number of fields (%d): %q", lenght, line)
+		length := len(fields)
+		if length != 3 {
+			return nil, fmt.Errorf("Row contains an incorrect number of fields (%d): %q", length, line)
 		}
 
 		name := strings.TrimSpace(fields[0])
